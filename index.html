@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #343a40;
+        }
+        .gamearea{
+            margin: auto;
+            display: grid;
+            width: fit-content;
+            grid-template-columns: 250px 50px;
+            grid-template-rows: auto 200px;
+            background-color: #798086;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .ColorCheckContainer{
+            width: 50px;
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: 60px 60px 60px 60px 60px 60px 60px 60px 60px 60px;
+        }
+        .ChooseColor{
+            background-color: #556F7A;
+            height: 200px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-column: 1/3;
+            border-radius: 8px;
+            align-items: center;
+            justify-items: center;
+        }
+        .szin{
+            width: 50px;
+            height: 50px;
+            background-color: #2E6171;
+            border-radius: 8px;
+        }
+        .sorok{
+            display: grid;
+            grid-template-columns: 60px 60px 60px 60px;
+            grid-template-rows: 60px;
+        }
+        .checkline{
+            width: 50px;
+            height: 50px;
+            background-color: #B79FAD;
+            display: grid;
+            grid-template-columns: 25px 25px;
+            grid-template-rows: 25px 25px;
+            justify-items: center;
+            align-content: center;
+            align-items: center;
+            border-radius: 8px;
+        }
+        .checkcolor{
+            width: 20px;
+            height: 20px;
+            background-color: azure;
+            border-radius: 50%;
+        }
+        .colors{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #piros{background-color: red;}
+        #kék{background-color: blue;}
+        #zöld{background-color: green;}
+        #sárga{background-color: yellow;}
+        #narancs{background-color: orange;}
+        #lila{background-color: purple;}
+        #rozsaszín{background-color: rgb(249, 187, 197);}
+        #fekete{background-color: black;}
+        #fehér{background-color: white;}
+
+        #text{
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 0;
+            margin: auto auto;
+            background-color: #424242b0;
+            color: whitesmoke;
+            font-size: 150px;
+            z-index: 2;
+            text-align: center;
+        }
+        #text-container{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            background-color: rgba(187, 187, 187, 0.55);
+        }
+        #restart-btn{
+            display: block;
+            margin: 10px auto;
+            border: none;
+            background-color: #798086;
+            color: white;
+            border-radius: 12px;
+            width: 200px;
+            font-size: 20px;
+            height: 50px;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+        #restart-btn:hover{
+            background-color: whitesmoke;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="gamearea"></div>
+    <script src="script.js"></script>
+    <button onclick="location.reload()" id="restart-btn">Új játék indítása</button>
+</body>
+</html>
